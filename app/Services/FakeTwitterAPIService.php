@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class FakeTwitterAPIService
 {
-
-    public function __invoke(string $hashtag)
+    public function getTweetsByHashtag(string $hashtag)
     {
         $response = Http::fkTwitterApi()->get("/tweets/hashtag/{$hashtag}");
 

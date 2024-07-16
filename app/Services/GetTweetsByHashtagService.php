@@ -35,7 +35,7 @@ class GetTweetsByHashtagService
     public function __invoke(string $hashtag, int|null $getFromExternal) : array
     {
         if ($getFromExternal){
-            $fromExternalTweets = $this->fakeTwitterApiService->__invoke($hashtag);
+            $fromExternalTweets = $this->fakeTwitterApiService->getTweetsByHashtag($hashtag);
             $this->externalTweetsToDatabase($fromExternalTweets['data']);
         }
 
