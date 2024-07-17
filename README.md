@@ -27,3 +27,7 @@ php artisan optimize
 ```bash
 php artisan migrate
 ```
+### Ejecutar tests
+```bash
+php artisan test
+```
